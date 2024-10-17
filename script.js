@@ -1,16 +1,20 @@
 const buttons = document.querySelectorAll("button");
 const winner = document.getElementById("winner");
+const playerChoiceDiv = document.getElementById("player-choice");
+const computerChoiceDiv = document.getElementById("computer-choice");
 
 buttons.forEach(button => {
     button.addEventListener('click', function() {
         const playerChoice = button.textContent;
         console.log(`Player chose ${playerChoice}`);
+        playerChoiceDiv.textContent = playerChoice;
         playGame(playerChoice);
     })
 })
 
 function playGame(playerChoice){
     let computerChoice = getComputerChoice();
+    computerChoiceDiv.textContent = computerChoice;
     console.log(`Computer chose ${computerChoice}`);
     if(playerChoice === computerChoice){
         winner.textContent = "It's a tie!";

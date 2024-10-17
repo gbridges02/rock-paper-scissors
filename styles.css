@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing:border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+#match-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#winner {
+    display:flex;
+    justify-content: center;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+}
