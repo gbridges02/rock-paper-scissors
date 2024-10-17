@@ -1,3 +1,27 @@
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        const playerChoice = button.textContent;
+        console.log(`Player chose ${playerChoice}`);
+        playGame(playerChoice);
+    })
+})
+
+function playGame(playerChoice){
+    let computerChoice = getComputerChoice();
+    console.log(`Computer chose ${computerChoice}`);
+    if(playerChoice === computerChoice){
+        console.log("Tie");
+    }
+    else if(playerChoice === "Rock" && computerChoice === "Scissors" || playerChoice === "Paper" && computerChoice === "Rock" || playerChoice === "Scissors" && computerChoice === "Paper"){
+        console.log("Human");
+    }
+    else {
+        console.log("Computer");
+    }
+}
+
 function getComputerChoice() {
     let computerChoice = Math.floor(Math.random() * 3);
     if(computerChoice === 0){
@@ -11,7 +35,7 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
+/*function getHumanChoice() {
     let humanChoice = prompt("Rock, paper, or scissors?");
     while(true){
         if(humanChoice === null){
@@ -80,4 +104,4 @@ function playGame(){
     }
 }
 
-playGame();
+playGame();*/
