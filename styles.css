@@ -20,6 +20,17 @@ html, body {
     gap: 2rem;
 }
 
+#player-emoji, #computer-emoji{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+    width: 20rem;
+    font-size: 10rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
+
 #winner {
     display:flex;
     justify-content: center;
