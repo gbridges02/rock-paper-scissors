@@ -13,7 +13,8 @@ html, body {
     height: 100%;
 }
 
-#match-container {
+#choice-container,
+#emoji-container {
     display: flex;
     justify-content: center;
     gap: 2rem;

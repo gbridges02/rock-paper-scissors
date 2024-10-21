@@ -2,6 +2,8 @@ const buttons = document.querySelectorAll("button");
 const winner = document.getElementById("winner");
 const playerChoiceDiv = document.getElementById("player-choice");
 const computerChoiceDiv = document.getElementById("computer-choice");
+const playerChoiceEmoji = document.getElementById("player-emoji");
+const computerChoiceEmoji = document.getElementById("computer-emoji");
 
 buttons.forEach(button => {
     button.addEventListener('click', function() {
@@ -16,6 +18,8 @@ function playGame(playerChoice){
     let computerChoice = getComputerChoice();
     computerChoiceDiv.textContent = computerChoice;
     console.log(`Computer chose ${computerChoice}`);
+    playerChoiceEmoji.innerText = getEmoji(playerChoice);
+    computerChoiceEmoji.innerText = getEmoji(computerChoice);
     if(playerChoice === computerChoice){
         winner.textContent = "It's a tie!";
     }
@@ -40,6 +44,17 @@ function getComputerChoice() {
     }
 }
 
+function getEmoji(choice){
+    if(choice === "Rock"){
+        return "✊";
+    }
+    else if(choice === "Paper"){
+        return "🤚";
+    }
+    else {
+        return "✌️";
+    }
+}
 /*function getHumanChoice() {
     let humanChoice = prompt("Rock, paper, or scissors?");
     while(true){
