@@ -13,11 +13,15 @@ html, body {
     height: 100%;
 }
 
+#content-container {
+    width: 50rem;
+    margin: 8rem auto;
+}
+
 #choice-container,
 #emoji-container {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-around;
 }
 
 #player-emoji, #computer-emoji{
