@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    background-color: #ffcc66;
+    color:white;
 }
 
 *,
@@ -24,8 +26,19 @@ html, body {
     justify-content: space-around;
 }
 
+#emoji-container > div {
+    background-color: #ffcc99;
+}
+
 #choice-container, #winner {
     min-height: 2rem;
+}
+
+#choice-container > div {
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
 }
 
 #player-emoji, #computer-emoji{
