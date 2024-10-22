@@ -24,6 +24,10 @@ html, body {
     justify-content: space-around;
 }
 
+#choice-container, #winner {
+    min-height: 2rem;
+}
+
 #player-emoji, #computer-emoji{
     display: flex;
     align-items: center;
