@@ -1,8 +1,9 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: #ffcc66;
+    background-color: #ffcf75;
     color:white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 *,
@@ -27,17 +28,18 @@ html, body {
 }
 
 #emoji-container > div {
-    background-color: #ffcc99;
+    background-color: #F5DEB3;
 }
 
 #choice-container, #winner {
-    min-height: 2rem;
+    min-height: 3rem;
 }
 
 #choice-container > div {
-    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
 }
 
@@ -48,13 +50,16 @@ html, body {
     height: 20rem;
     width: 20rem;
     font-size: 10rem;
-    border: 2px solid black;
+    border: 6px solid #cdad72;
     border-radius: 1rem;
 }
 
 #winner {
     display:flex;
     justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 #button-container {
