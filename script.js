@@ -22,6 +22,18 @@ buttons.forEach(button => {
     })
 })
 
+restartButton.addEventListener('click', function() {
+    round = 1;
+    roundHeader.innerText = "Best of 5, round " + round;
+    playerScore = 0;
+    playerScoreHeader.innerText = "You: " + playerScore;
+    computerScore = 0;
+    computerScoreHeader.innerText = "Opponent: " + computerScore;
+    playerChoiceEmoji.innerText =  "";
+    computerChoiceEmoji.innerText = "";
+    restartButton.style.visibility = "hidden";
+})
+
 function playGame(playerChoice){
     let computerChoice = getComputerChoice();
     computerChoiceDiv.textContent = computerChoice;
@@ -42,12 +54,8 @@ function playGame(playerChoice){
         roundHeader.innerText = "Best of 5, round " + ++round;
     }
     if(playerScore >= 3 || computerScore >= 3){
-        endGame(winner);
+        restartButton.style.visibility = "visible";
     }
-}
-
-function endGame(result){
-    restartButton.style.visibility = "visible";
 }
 
 function getComputerChoice() {
