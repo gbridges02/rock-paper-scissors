@@ -4,6 +4,10 @@ const playerChoiceDiv = document.getElementById("player-choice");
 const computerChoiceDiv = document.getElementById("computer-choice");
 const playerChoiceEmoji = document.getElementById("player-emoji");
 const computerChoiceEmoji = document.getElementById("computer-emoji");
+const roundHeader = document.getElementById("round");
+
+let round = 1;
+roundHeader.innerText = "Round " + round;
 
 buttons.forEach(button => {
     button.addEventListener('click', function() {
@@ -29,6 +33,7 @@ function playGame(playerChoice){
     else {
         winner.textContent = "You Lose!";
     }
+    roundHeader.innerText = "Round " + ++round;
 }
 
 function getComputerChoice() {

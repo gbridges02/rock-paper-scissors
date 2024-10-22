@@ -17,52 +17,34 @@ html, body {
 }
 
 #content-container {
-    width: 50rem;
+    width: 42rem;
     margin: 8rem auto;
 }
 
-#choice-container,
-#emoji-container {
+#player-computer-comparison {
+    display:flex;
+    justify-content: space-between;
+}
+
+#player-container,
+#computer-container {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
 }
 
-#emoji-container > div {
-    background-color: #F5DEB3;
-}
-
-#choice-container, #winner {
-    min-height: 3rem;
-}
-
-#choice-container > div {
+#player-emoji,
+#computer-emoji,
+#player-choice,
+#computer-choice,
+#winner {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    font-weight: 700;
 }
 
-#player-emoji, #computer-emoji{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#player-emoji, #computer-emoji {
     height: 20rem;
     width: 20rem;
+    background-color: white;
     font-size: 10rem;
-    border: 6px solid #cdad72;
-    border-radius: 1rem;
-}
-
-#winner {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-#button-container {
-    display: flex;
-    justify-content: center;
 }
