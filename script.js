@@ -1,13 +1,17 @@
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll("#button-container button");
 const winner = document.getElementById("winner");
 const playerChoiceDiv = document.getElementById("player-choice");
 const computerChoiceDiv = document.getElementById("computer-choice");
 const playerChoiceEmoji = document.getElementById("player-emoji");
 const computerChoiceEmoji = document.getElementById("computer-emoji");
 const roundHeader = document.getElementById("round");
+const playerScoreHeader = document.getElementById("player-score")
+const computerScoreHeader = document.getElementById("computer-score");
+const restartButton = document.getElementById("restart-button");
 
 let round = 1;
-roundHeader.innerText = "Best of 5, Round " + round;
+let playerScore = 0;
+let computerScore = 0;
 
 buttons.forEach(button => {
     button.addEventListener('click', function() {
@@ -29,11 +33,21 @@ function playGame(playerChoice){
     }
     else if(playerChoice === "Rock" && computerChoice === "Scissors" || playerChoice === "Paper" && computerChoice === "Rock" || playerChoice === "Scissors" && computerChoice === "Paper"){
         winner.textContent = "You win!";
+        playerScoreHeader.innerText = "You: " + ++playerScore;
+        roundHeader.innerText = "Best of 5, round " + ++round;
     }
     else {
         winner.textContent = "You Lose!";
+        computerScoreHeader.innerText = "Opponent: " + ++computerScore;
+        roundHeader.innerText = "Best of 5, round " + ++round;
     }
-    roundHeader.innerText = "Best of 5, round " + ++round;
+    if(playerScore >= 3 || computerScore >= 3){
+        endGame(winner);
+    }
+}
+
+function endGame(result){
+    restartButton.style.visibility = "visible";
 }
 
 function getComputerChoice() {

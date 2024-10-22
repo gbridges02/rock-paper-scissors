@@ -9,14 +9,15 @@
 <body>
     <h1>Rock, Paper, Scissors</h1>
     <div id="content-container">
-        <h2 id="round"></h1>
+        <h2 id="round">Best of 5, Round 1</h1>
         <div id="player-computer-comparison">
             <div id="player-container">
-                
+                <div id="player-score">You: 0</div>
                 <div id="player-emoji" class="emoji-container"></div>
                 <div id="player-choice"></div>
             </div>
             <div id="computer-container">
+                <div id="computer-score">Opponent: 0</div>
                 <div id="computer-emoji" class="emoji-container"></div>
                 <div id="computer-choice"></div>
             </div>
@@ -27,6 +28,7 @@
             <button>Paper</button>
             <button>Scissors</button>
         </div>
+        <button id="restart-button">Play again?</button>
     </div>
     <script src="script.js" defer></script>
 </body>

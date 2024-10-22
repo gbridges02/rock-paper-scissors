@@ -45,6 +45,12 @@ h2 {
     flex-direction: column;
 }
 
+#player-score,
+#computer-score{
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
 #player-emoji,
 #computer-emoji,
 #player-choice,
@@ -61,4 +67,8 @@ h2 {
     background-color: white;
     font-size: 10rem;
     border-radius: 1rem;
+}
+
+#restart-button {
+    visibility: hidden;
 }
