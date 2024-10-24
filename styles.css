@@ -65,10 +65,21 @@ h2 {
     height: 20rem;
     width: 20rem;
     background-color: white;
-    font-size: 10rem;
+    font-size: 12rem;
     border-radius: 1rem;
 }
 
+#player-choice, #computer-choice {
+    font-size: 1.5rem;
+    min-height: 2rem;
+    margin-top: 0.5rem;
+}
+
+#winner {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    min-height: 4rem;
+}
 #button-container {
     display: flex;
     justify-content: space-between;
@@ -77,10 +88,18 @@ h2 {
 
 #button-container > button {
     font-size: 1.5rem;
-    min-height: 4rem;
-    min-width: 8rem;
+    min-height: 5rem;
+    min-width: 10rem;
     border-radius: 1rem;
+    background-color: white;
+    color: black;
+    font-weight: 600;
 }
+
+#button-container > button:hover {
+    background-color: rgb(232, 232, 232);
+}
+
 #restart-button {
     visibility: hidden;
 }
