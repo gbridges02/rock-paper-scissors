@@ -99,7 +99,21 @@ h2 {
 #button-container > button:hover {
     background-color: rgb(232, 232, 232);
 }
+#restart-container {
+    display:flex;
+    justify-content: center;
+}
 
 #restart-button {
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 3rem;
     visibility: hidden;
+}
+
+#restart-button:hover {
+    color: rgb(0, 0, 191);
 }

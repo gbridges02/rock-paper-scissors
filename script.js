@@ -1,4 +1,5 @@
 const buttons = document.querySelectorAll("#button-container button");
+const buttonContainer = document.getElementById("button-container");
 const winner = document.getElementById("winner");
 const playerChoiceDiv = document.getElementById("player-choice");
 const computerChoiceDiv = document.getElementById("computer-choice");
@@ -32,6 +33,7 @@ restartButton.addEventListener('click', function() {
     playerChoiceEmoji.innerText =  "";
     computerChoiceEmoji.innerText = "";
     restartButton.style.visibility = "hidden";
+    buttonContainer.style.display = "flex";
 })
 
 function playGame(playerChoice){
@@ -54,6 +56,7 @@ function playGame(playerChoice){
         roundHeader.innerText = "Best of 5, round " + ++round;
     }
     if(playerScore >= 3 || computerScore >= 3){
+        buttonContainer.style.display = "none";
         restartButton.style.visibility = "visible";
     }
 }
