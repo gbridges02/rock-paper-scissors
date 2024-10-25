@@ -97,6 +97,7 @@ h2 {
     background-color: white;
     color: black;
     font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #button-container > button:hover {
