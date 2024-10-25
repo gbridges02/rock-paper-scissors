@@ -18,7 +18,6 @@ let computerScore = 0;
 buttons.forEach(button => {
     button.addEventListener('click', function() {
         const playerChoice = button.textContent;
-        console.log(`Player chose ${playerChoice}`);
         playerChoiceDiv.textContent = playerChoice;
         playGame(playerChoice);
     })
@@ -42,7 +41,6 @@ restartButton.addEventListener('click', function() {
 function playGame(playerChoice){
     let computerChoice = getComputerChoice();
     computerChoiceDiv.textContent = computerChoice;
-    console.log(`Computer chose ${computerChoice}`);
     playerChoiceEmoji.innerText = getEmoji(playerChoice);
     computerChoiceEmoji.innerText = getEmoji(computerChoice);
     if(playerChoice === computerChoice){
