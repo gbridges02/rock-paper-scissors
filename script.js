@@ -9,6 +9,7 @@ const roundHeader = document.getElementById("round");
 const playerScoreHeader = document.getElementById("player-score")
 const computerScoreHeader = document.getElementById("computer-score");
 const restartButton = document.getElementById("restart-button");
+const body = document.body;
 
 let round = 1;
 let playerScore = 0;
@@ -34,6 +35,8 @@ restartButton.addEventListener('click', function() {
     computerChoiceEmoji.innerText = "";
     restartButton.style.visibility = "hidden";
     buttonContainer.style.display = "flex";
+    body.style.backgroundColor = "#ffcf75";
+    winner.innerText = "What will you choose?";
 })
 
 function playGame(playerChoice){
@@ -56,6 +59,12 @@ function playGame(playerChoice){
         roundHeader.innerText = "Best of 5, round " + ++round;
     }
     if(playerScore >= 3 || computerScore >= 3){
+        if(playerScore >= 3){
+            body.style.backgroundColor = "green";
+        }
+        else{
+            body.style.backgroundColor = "red";
+        }
         buttonContainer.style.display = "none";
         restartButton.style.visibility = "visible";
     }
