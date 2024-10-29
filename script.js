@@ -15,6 +15,7 @@ let round = 1;
 let playerScore = 0;
 let computerScore = 0;
 
+//Add onClick function to each game choice to play a round with that choice
 buttons.forEach(button => {
     button.addEventListener('click', function() {
         const playerChoice = button.textContent;
@@ -23,6 +24,7 @@ buttons.forEach(button => {
     })
 })
 
+//Change DOM to reflect the start of a new game
 restartButton.addEventListener('click', function() {
     round = 1;
     roundHeader.innerText = "Best of 5, round " + round;
@@ -38,6 +40,7 @@ restartButton.addEventListener('click', function() {
     winner.innerText = "What will you choose?";
 })
 
+//play a round of a game with the given player choice
 function playGame(playerChoice){
     let computerChoice = getComputerChoice();
     computerChoiceDiv.textContent = computerChoice;
@@ -68,6 +71,7 @@ function playGame(playerChoice){
     }
 }
 
+//computer randomly chooses between three options
 function getComputerChoice() {
     let computerChoice = Math.floor(Math.random() * 3);
     if(computerChoice === 0){
@@ -81,6 +85,7 @@ function getComputerChoice() {
     }
 }
 
+//get correct emoji to display depending on the choice
 function getEmoji(choice){
     if(choice === "Rock"){
         return "✊";
